@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using System.Linq;
+
 
 namespace PrincessBrideTrivia.Tests
 {
@@ -86,5 +88,60 @@ namespace PrincessBrideTrivia.Tests
                 File.AppendAllLines(filePath, lines);
             }
         }
+        /*
+        [TestMethod]
+        private static void RandomizedOrderDiffersFromOriginal()
+        {
+
+            // Arrange
+            string filePath = Program.GetFilePath();
+            Question[] qOriginal = Program.LoadQuestions(filePath);
+            Question[] qRandom = Program.RandomizeQuestions(qOriginal);
+
+            bool different = false;
+
+            // Act
+            for (int i = 0; i < qOriginal.Length; i++)
+            {
+                if (qOriginal[i] != qRandom[i]) // 1/(7!) chance they are the same if Randomize method is succesful
+                {
+                    different = true;
+                }
+            }
+
+            if (different == false) // 2nd attempt in case 1/(7!) chance occurred
+            {
+                Question[] qR2 = Program.RandomizeQuestions(qOriginal);
+                
+
+                for (int i = 0; i < qOriginal.Length; i++)
+                {
+                    if (qOriginal[i] != qR2[i])
+                    {
+                        different = true;
+                    }
+                }
+                if (different == false) // 3rd attempt
+                {
+                    
+                    Question[] qR3 = Program.RandomizeQuestions(qRandom);
+
+                    for (int i = 0; i < qOriginal.Length; i++)
+                    {
+                        if (qRandom[i] != qR3[i])
+                        {
+                            different = true;
+                        }
+                    }
+
+                }
+
+            }
+
+            // Assert
+            Assert.IsTrue(different);
+
+        }
+        */
     }
 }

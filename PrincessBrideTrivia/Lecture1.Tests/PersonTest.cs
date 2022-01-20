@@ -1,4 +1,4 @@
-
+/*
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lecture1.Tests
@@ -40,3 +40,4 @@ namespace Lecture1.Tests
 
 	}
 }
+*/

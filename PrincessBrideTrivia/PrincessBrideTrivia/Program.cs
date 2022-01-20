@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
 
-//comment just to test commit/push
+// comment just to test commit/push
 
 // 2nd comment
 
@@ -14,8 +16,11 @@ namespace PrincessBrideTrivia
         {
             string filePath = GetFilePath();
             Question[] questions = LoadQuestions(filePath);
+            Question[] questionsRnd = RandomizeQuestions(questions);
 
             int numberCorrect = 0;
+            
+            // original
             for (int i = 0; i < questions.Length; i++)
             {
                 bool result = AskQuestion(questions[i]);
@@ -24,12 +29,30 @@ namespace PrincessBrideTrivia
                     numberCorrect++;
                 }
             }
-            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questions.Length) + " correct");
+            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questionsRnd.Length) + " correct");
+            
+            // randomized ( questions updated to be questionsRnd )
+            for (int i = 0; i < questionsRnd.Length; i++)
+            {
+                bool result = AskQuestion(questionsRnd[i]);
+                if (result)
+                {
+                    numberCorrect++;
+                }
+            }
+            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questionsRnd.Length) + " correct");
         }
 
         public static string GetPercentCorrect(int numberCorrectAnswers, int numberOfQuestions)
         {
-            return (numberCorrectAnswers / numberOfQuestions * 100) + "%";
+            double ret = ((double)numberCorrectAnswers / (double)numberOfQuestions * 100);
+
+            if (ret == 0.0)
+            {
+                return "0%";
+            }
+
+            return ret.ToString("#.##") + "%";
         }
 
         public static bool AskQuestion(Question question)
@@ -87,15 +110,27 @@ namespace PrincessBrideTrivia
 
                 string correctAnswerIndex = lines[lineIndex + 4];
 
-                Question question = new Question();
+                Question question = new();
                 question.Text = questionText;
                 question.Answers = new string[3];
                 question.Answers[0] = answer1;
                 question.Answers[1] = answer2;
                 question.Answers[2] = answer3;
                 question.CorrectAnswerIndex = correctAnswerIndex;
+
+                questions[i] = question;
             }
             return questions;
         }
+        
+        public static Question[] RandomizeQuestions(Question[] questions)
+        {
+           
+            Random randomizer = new();
+            Question[] qRandom = questions.OrderBy(q => randomizer.Next()).ToArray();
+            
+            return qRandom;
+        }
+        
     }
 }
