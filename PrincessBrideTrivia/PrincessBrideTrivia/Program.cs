@@ -5,6 +5,7 @@ using System.IO;
 
 // 2nd comment
 
+// 3rd attempt in class thursday
 namespace PrincessBrideTrivia
 {
     public class Program

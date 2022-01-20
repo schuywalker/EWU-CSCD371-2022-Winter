@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29215.179
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrincessBrideTrivia", ".\PrincessBrideTrivia\PrincessBrideTrivia.csproj", "{43E8309C-D064-4743-B038-16F808E98D98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrincessBrideTrivia", "PrincessBrideTrivia\PrincessBrideTrivia.csproj", "{43E8309C-D064-4743-B038-16F808E98D98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrincessBrideTrivia.Tests", ".\PrincessBrideTrivia.Tests\PrincessBrideTrivia.Tests.csproj", "{D6C5DE8F-993F-4DEE-B68E-979620ACCF37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrincessBrideTrivia.Tests", "PrincessBrideTrivia.Tests\PrincessBrideTrivia.Tests.csproj", "{D6C5DE8F-993F-4DEE-B68E-979620ACCF37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture1", "Lecture1\Lecture1.csproj", "{6406DBA5-9F73-4DE0-825B-99B08EA377D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture1.Tests", "Lecture1.Tests\Lecture1.Tests.csproj", "{B4BE024D-0028-489B-BAE8-539D3D38689B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{D6C5DE8F-993F-4DEE-B68E-979620ACCF37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6C5DE8F-993F-4DEE-B68E-979620ACCF37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6C5DE8F-993F-4DEE-B68E-979620ACCF37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6406DBA5-9F73-4DE0-825B-99B08EA377D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6406DBA5-9F73-4DE0-825B-99B08EA377D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6406DBA5-9F73-4DE0-825B-99B08EA377D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6406DBA5-9F73-4DE0-825B-99B08EA377D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4BE024D-0028-489B-BAE8-539D3D38689B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4BE024D-0028-489B-BAE8-539D3D38689B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4BE024D-0028-489B-BAE8-539D3D38689B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4BE024D-0028-489B-BAE8-539D3D38689B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
