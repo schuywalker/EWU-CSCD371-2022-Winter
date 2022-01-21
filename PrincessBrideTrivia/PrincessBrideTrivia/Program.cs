@@ -3,11 +3,6 @@ using System.IO;
 using System.Linq;
 
 
-// comment just to test commit/push
-
-// 2nd comment
-
-// 3rd attempt in class thursday
 namespace PrincessBrideTrivia
 {
     public class Program
@@ -20,9 +15,6 @@ namespace PrincessBrideTrivia
             Question[] questionsRnd = RandomizeQuestions(questions);
             
             int numberCorrect = 0;
-            
-            
-            
             
             // randomized ( questions updated to be questionsRnd )
             for (int i = 0; i < questionsRnd.Length; i++)
