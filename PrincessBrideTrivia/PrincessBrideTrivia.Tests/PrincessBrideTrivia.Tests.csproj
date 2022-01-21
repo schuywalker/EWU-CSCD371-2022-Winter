@@ -5,7 +5,7 @@
 
     <IsPackable>false</IsPackable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-	 
+	  
     <WarningsAsErrors />
   </PropertyGroup>
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
+
 
 // comment just to test commit/push
 
@@ -21,17 +21,8 @@ namespace PrincessBrideTrivia
             
             int numberCorrect = 0;
             
-            // original
-            for (int i = 0; i < questions.Length; i++)
-            {
-                bool result = AskQuestion(questions[i]);
-                if (result)
-                {
-                    numberCorrect++;
-                }
-            }
             
-            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questions.Length) + " correct");
+            
             
             // randomized ( questions updated to be questionsRnd )
             for (int i = 0; i < questionsRnd.Length; i++)
@@ -48,7 +39,7 @@ namespace PrincessBrideTrivia
 
         public static string GetPercentCorrect(int numberCorrectAnswers, int numberOfQuestions)
         {
-            double ret = ((double)numberCorrectAnswers / (double)numberOfQuestions) * 100;
+            double ret = (((double)numberCorrectAnswers / (double)numberOfQuestions) * 100);
             
             if (ret == 0.0)
             {
