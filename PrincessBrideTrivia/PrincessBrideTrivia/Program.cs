@@ -16,8 +16,9 @@ namespace PrincessBrideTrivia
         {
             string filePath = GetFilePath();
             Question[] questions = LoadQuestions(filePath);
+            /*
             Question[] questionsRnd = RandomizeQuestions(questions);
-
+            */
             int numberCorrect = 0;
             
             // original
@@ -29,8 +30,8 @@ namespace PrincessBrideTrivia
                     numberCorrect++;
                 }
             }
-            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questionsRnd.Length) + " correct");
-            
+            Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questions.Length) + " correct");
+            /*
             // randomized ( questions updated to be questionsRnd )
             for (int i = 0; i < questionsRnd.Length; i++)
             {
@@ -41,6 +42,7 @@ namespace PrincessBrideTrivia
                 }
             }
             Console.WriteLine("You got " + GetPercentCorrect(numberCorrect, questionsRnd.Length) + " correct");
+            */
         }
 
         public static string GetPercentCorrect(int numberCorrectAnswers, int numberOfQuestions)
