@@ -12,6 +12,7 @@
         // There is an existing BaseLogger class. It needs an auto property to hold the class name.
         // This property should be set in the LogFactory using an object initializer.
         new BaseLogger className { get; set; }
+
         //References for research
         //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer
         // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties
