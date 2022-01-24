@@ -8,24 +8,26 @@ namespace Logger
 
         
     {
-        private string Path = "x";//well need to change this later and use nameOf()
+        private static string Path = "x";//we'll need to change this later and use nameOf()
 
-        public FileLogger? CreateLogger(string className)
+        public static FileLogger? CreateLogger(string className)
         {
             //parse className??
             
             FileLogger logger = new FileLogger(Path);
             logger.ClassName = className;
+            ConfigureFileLogger(logger, Path);
 
-
-            if (true)
+            return logger;
+/*
+            if (true)//needs to be if file logger not configured, but cant access FilePath getter. not sure what to do here..
             {
                 return null;
             }
-
+*/
         }
 
-        public void ConfigureFileLogger(FileLogger logger, string FilePath)
+        public static void ConfigureFileLogger(FileLogger logger, string FilePath)
         {
             Path = FilePath;
         }
