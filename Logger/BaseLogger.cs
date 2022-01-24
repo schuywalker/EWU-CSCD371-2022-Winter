@@ -5,10 +5,9 @@
         public abstract void Log(LogLevel logLevel, string message);
 
         // auto property
-        string? name;
+        //string? name;
 
     }
 }
 
-    }
-}
+
