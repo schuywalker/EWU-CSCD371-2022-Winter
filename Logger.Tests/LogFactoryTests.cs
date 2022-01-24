@@ -12,7 +12,7 @@ namespace Logger.Tests
             // Arrange
             string path = "testPath";
             // Act
-            FileLogger logger = LogFactory.CreateLogger(path);
+            FileLogger? logger = LogFactory.CreateLogger(path);
             // Assert
 
             Assert.IsNotNull(logger);
@@ -23,9 +23,9 @@ namespace Logger.Tests
             // Arrange
             string path = "testPath";
             // Act
-            FileLogger logger = LogFactory.CreateLogger(path);
+            FileLogger? logger = LogFactory.CreateLogger(path);
             // Assert
-            Assert.Equals(logger.ClassName, path); // we've tested its not null above, so we'll likely suppress this warning later
+            Assert.AreEqual(logger.ClassName, path); // we've tested its not null above, so we'll likely suppress this warning later
         }
     }
 }

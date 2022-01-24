@@ -8,7 +8,10 @@ namespace Logger.Tests
         [TestMethod]
         public void Log_FileExists()
         {
-            //LogFactory()
+            FileLogger testLogger = LogFactory.CreateLogger("Error");
+
+
+            
         }
 
         
