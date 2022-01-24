@@ -1,17 +1,38 @@
-﻿namespace Logger
+﻿using System;
+using Logger;
+
+namespace Logger
 {
     // References: CSCD371 Lecture
     public class LogFactory
-    {
 
-        public BaseLogger CreateLogger(string className)
+        
+    {
+        private string Path = "x";//well need to change this later and use nameOf()
+
+        public FileLogger? CreateLogger(string className)
         {
-            return null;
+            
+            FileLogger logger = new FileLogger(Path);
+            
+
+            if (true)
+            {
+                return null;
+            }
+
         }
+
+        public void ConfigureFileLogger(FileLogger logger, string FilePath)
+        {
+            Path = FilePath;
+        }
+        
 
         // There is an existing BaseLogger class. It needs an auto property to hold the class name.
         // This property should be set in the LogFactory using an object initializer.
-        new BaseLogger className { get; set; }
+        
+
 
         //References for research
         //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer

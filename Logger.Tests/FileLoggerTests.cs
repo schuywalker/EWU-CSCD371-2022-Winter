@@ -10,5 +10,16 @@ namespace Logger.Tests
         {
             //LogFactory()
         }
+
+    }
+
+    [TestMethod]
+    public void ConfigureFileLogger_NotConfigured_ReturnsNull()
+    {
+
+        /*if (LogFactory.configured == false)
+        {
+            Assert.IsNull(LogFactory());
+        }*/
     }
 }
