@@ -12,9 +12,11 @@ namespace Logger
 
         public FileLogger? CreateLogger(string className)
         {
+            //parse className??
             
             FileLogger logger = new FileLogger(Path);
-            
+            logger.ClassName = className;
+
 
             if (true)
             {
