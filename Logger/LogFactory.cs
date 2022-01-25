@@ -3,7 +3,6 @@ using Logger;
 
 namespace Logger
 {
-    // References: CSCD371 Lecture
     public class LogFactory   
     {
         private static string Path = "x";//we'll need to change this later and use nameOf()
