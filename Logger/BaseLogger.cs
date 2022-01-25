@@ -8,7 +8,6 @@
         public string? ClassName { get; set; }
         //public bool Configured { get; set; }
 
-
     }
 
 }
