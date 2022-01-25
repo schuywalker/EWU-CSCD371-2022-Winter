@@ -8,14 +8,9 @@ namespace Logger.Tests
         [TestMethod]
         public void Log_FileExists()
         {
-            FileLogger testLogger = LogFactory.CreateLogger("Error");
+            _ = LogFactory.CreateLogger("Error");
 
-
-            
         }
-
-        
-
 
         /* [TestMethod]
          public void ConfigureFileLogger_NotConfigured_ReturnsNull()

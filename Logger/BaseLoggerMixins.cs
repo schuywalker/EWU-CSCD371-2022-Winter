@@ -18,7 +18,7 @@ namespace Logger
 
         // * Code Reference
         // https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=dotnet-plat-ext-3.1#extension-methods
-        public static void LogError(string message, params object[] args)
+        public static void LogError(string message, params object?[] args)
         {
             if (args == null)
             {
@@ -82,6 +82,19 @@ namespace Logger
                 LogDebug(message, args[i]);
             }
         }
- 
+
+        public class LogMixins : BaseLogger
+        {
+            public override void Log(LogLevel logLevel, string message)
+            {
+                BaseLoggerMixins.LogError(message, logLevel);
+                BaseLoggerMixins.LogWarning(message, logLevel);
+                BaseLoggerMixins.LogInformation(message, logLevel);
+                BaseLoggerMixins.LogDebug(message, logLevel);
+
+                throw new System.NotImplementedException();
+            }
+        }
+
     }
 }
