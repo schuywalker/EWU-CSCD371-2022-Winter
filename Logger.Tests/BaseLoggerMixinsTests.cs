@@ -14,7 +14,7 @@ namespace Logger.Tests
             // Arrange
 
             // Act
-            //BaseLoggerMixins.Error(null, "");
+            //BaseLoggerMixins.LogError(null, "");
 
             // Assert
         }
@@ -23,15 +23,15 @@ namespace Logger.Tests
         public void Error_WithData_LogsMessage()
         {
             // Arrange
-            var logger = new TestLogger();
+            var Logger = new TestLogger();
 
             // Act
-            //logger.Error("Message {0}", 42);
+            Logger.LogError("Message {0}", 42);
 
             // Assert
-            Assert.AreEqual(1, logger.LoggedMessages.Count);
-            Assert.AreEqual(LogLevel.Error, logger.LoggedMessages[0].LogLevel);
-            Assert.AreEqual("Message 42", logger.LoggedMessages[0].Message);
+            Assert.AreEqual(1, Logger.LoggedMessages.Count);
+            Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
+            Assert.AreEqual("Message 42", Logger.LoggedMessages[0].Message);
         }
 
     }
