@@ -7,6 +7,7 @@ namespace Logger.Tests
     [TestClass]
     public class BaseLoggerMixinsTests
     {
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void Error_WithNullLogger_ThrowsException()
@@ -14,7 +15,7 @@ namespace Logger.Tests
             // Arrange
 
             // Act
-            //BaseLoggerMixins.LogError(null, "");
+            BaseLoggerMixins.LogError(null, "");
 
             // Assert
         }

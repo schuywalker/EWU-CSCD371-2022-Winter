@@ -28,41 +28,5 @@ namespace Logger.Tests
             Assert.AreEqual(logger.ClassName, path); // we've tested its not null above, so we'll likely suppress this warning later
         }
 
-        public void ErrorLog()
-        {
-            // Arrange 
-
-            // Act
-
-            //Assert
-
-        }
-        public void WarningLog()
-        {
-            // Arrange 
-
-            // Act
-
-            //Assert
-        }
-
-        public void InformationLog()
-        {
-            // Arrange 
-
-            // Act
-
-            //Assert
-        }
-
-        public void DebugLog()
-        {
-            // Arrange 
-
-            // Act
-
-            //Assert
-        }
-
     }
 }
