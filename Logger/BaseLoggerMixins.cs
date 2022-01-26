@@ -11,7 +11,7 @@ namespace Logger
 
         // * Code Reference
         // https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=dotnet-plat-ext-3.1#extension-methods
-        public static void LogError(this BaseLogger baseLogger, string message, params object?[] args)
+        public static void LogError(this BaseLogger baseLogger, string? message, params object?[] args)
         {
             if (args == null)
             {
@@ -72,5 +72,7 @@ namespace Logger
             baseLogger.Log(LogLevel.Debug, debug);
 
         }
+
+ 
     }
 }

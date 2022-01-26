@@ -5,7 +5,7 @@ namespace Logger
 {
     public class LogFactory   
     {
-        private static string Path = "x";//we'll need to change this later and use nameOf()
+        private static string Path = nameof(Logger.BaseLogger.ClassName); //we'll need to change this later and use nameOf()
 
         public static FileLogger? CreateLogger(string className)
         {
