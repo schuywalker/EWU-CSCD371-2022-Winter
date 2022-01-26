@@ -4,14 +4,13 @@ namespace Logger
 {
     public static class BaseLoggerMixins
     {
-
         //References for research
         // https://csharp.hotexamples.com/examples/System/Logger/LogError/php-logger-logerror-method-examples.html
         // https://www.code4it.dev/blog/csharp-extension-methods
 
         // * Code Reference
         // https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=dotnet-plat-ext-3.1#extension-methods
-        public static void LogError(this BaseLogger? baseLogger, string message, params object[] args)
+        public static void LogWarning(this BaseLogger? baseLogger, string message, params object[] args)
         {
             if (baseLogger == null)
             {
@@ -27,7 +26,7 @@ namespace Logger
 
         // * Code Reference 
         //https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.loggerextensions.logwarning?view=dotnet-plat-ext-6.0#microsoft-extensions-logging-loggerextensions-logwarning(microsoft-extensions-logging-ilogger-system-string-system-object())
-        public static void LogWarning(this BaseLogger? baseLogger, string message, params object[] args)
+        public static void LogInformaton(this BaseLogger? baseLogger, string message, params object[] args)
             {
             if(baseLogger == null)
             {
