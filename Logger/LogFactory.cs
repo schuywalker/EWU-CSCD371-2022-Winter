@@ -5,28 +5,41 @@ namespace Logger
 {
     public class LogFactory   
     {
-        private static string Path = nameof(Logger.BaseLogger.ClassName); //we'll need to change this later and use nameOf()
+        private string? Path;
+        //nameof(Logger.BaseLogger.ClassName); //Schuyler: changing this in order to set it in a LogFactory constructor, we can go back if we decide we dont need it!
+        //private string? ClassName;
 
-        public static FileLogger? CreateLogger(string className)
+        public bool Configured { get; set; }
+        public LogFactory()
         {
-            //parse className??
-            
-            FileLogger logger = new FileLogger(Path);
-            logger.ClassName = className;
-            ConfigureFileLogger(logger, Path);
-
-            return logger;
-/*
-            if (true)//needs to be if file logger not configured, but cant access FilePath getter. not sure what to do here..
-            {
-                return null;
-            }
-*/
+            Configured = false;
         }
 
-        public static void ConfigureFileLogger(FileLogger logger, string FilePath)
+
+        public BaseLogger CreateLogger(string className) //BaseLogger
         {
-            Path = FilePath;
+            if (!Configured)
+            {
+                return null!;//intending to return null in this case   
+            }
+
+            else
+            {
+                BaseLogger logger = new FileLogger(Path!) //using bang because if condition will execute above if Path is Null
+                {
+                    ClassName = className,
+                };  
+                return logger;
+            }
+               
+        }
+
+        public void ConfigureFileLogger(string FilePath)
+        {
+            
+                Path = FilePath;
+                Configured = true;
+            
         }
         
     }

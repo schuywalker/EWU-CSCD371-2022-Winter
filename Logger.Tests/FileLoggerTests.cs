@@ -5,10 +5,11 @@ namespace Logger.Tests
     [TestClass]
     public class FileLoggerTests
     {
+        /* /////// delete line after testing
         [TestMethod]
         public void Log_FileExists()
         {
-            _ = LogFactory.CreateLogger("Error");
+             = LogFactory.CreateLogger("Error");
 
         }
 

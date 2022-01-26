@@ -46,4 +46,4 @@ namespace Logger.Tests
             LoggedMessages.Add((logLevel, message));
         }
     }
-}
+}// Assert.AreEqual<INSERT DATA TYPE>(...)
