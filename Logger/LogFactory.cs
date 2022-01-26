@@ -7,27 +7,28 @@ namespace Logger
     {
         private string? Path;
         //nameof(Logger.BaseLogger.ClassName); //Schuyler: changing this in order to set it in a LogFactory constructor, we can go back if we decide we dont need it!
-        private string? ClassName;
+        //private string? ClassName;
 
-        private bool Configured { get; set; }
+        public bool Configured { get; set; }
         public LogFactory()
         {
             Configured = false;
         }
 
 
-        public BaseLogger? CreateLogger(string className) //BaseLogger
+        public BaseLogger CreateLogger(string className) //BaseLogger
         {
             if (!Configured)
             {
-                return null;
-                
+                return null!;//intending to return null in this case   
             }
 
             else
             {
-                BaseLogger logger = new FileLogger(Path!);//using bang because if condition will execute above if Path is Null
-                ConfigureFileLogger(Path!);
+                BaseLogger logger = new FileLogger(Path!) //using bang because if condition will execute above if Path is Null
+                {
+                    ClassName = className,
+                };  
                 return logger;
             }
                
@@ -35,8 +36,10 @@ namespace Logger
 
         public void ConfigureFileLogger(string FilePath)
         {
-            Path = FilePath;
-            Configured = true;
+            
+                Path = FilePath;
+                Configured = true;
+            
         }
         
     }

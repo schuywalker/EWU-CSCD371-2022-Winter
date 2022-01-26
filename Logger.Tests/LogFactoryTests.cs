@@ -7,25 +7,28 @@ namespace Logger.Tests
     public class LogFactoryTests
     {
         [TestMethod]
-        public void NotNull_CreateLogger()
+        public void CreateLogger_ConfigureWithNull_Success()
         {
             // Arrange
-            string path = "testPath";
+            LogFactory logFactory = new();
+            BaseLogger logger = logFactory.CreateLogger(nameof(LogFactoryTests));
             // Act
-            FileLogger? logger = LogFactory.CreateLogger(path);
+
             // Assert
 
-            Assert.IsNotNull(logger);
+            Assert.IsNull(logger);
         }
         [TestMethod]
-        public void CreateLogger_BaseLoggerClassNameSet()
+        public void CreateLogger_ConfigureWithPath_Success()
         {
             // Arrange
-            string path = "testPath";
+            LogFactory logFactory = new();
+            logFactory.ConfigureFileLogger("file.txt");
+            BaseLogger logger = logFactory.CreateLogger(nameof(LogFactoryTests));
             // Act
-            FileLogger? logger = LogFactory.CreateLogger(path);
+            
             // Assert
-            Assert.AreEqual(logger.ClassName, path); // we've tested its not null above, so we'll likely suppress this warning later
+            Assert.IsNotNull(logger); // we've tested its not null above, so we'll likely suppress this warning later
         }
 
         public void ErrorLog()
