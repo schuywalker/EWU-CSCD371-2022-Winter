@@ -16,8 +16,9 @@ namespace Logger
 
         private string? FilePath 
         { get; set; }
-        public FileLogger(string FilePath)
+        public FileLogger(string className, string FilePath)
         {
+            this.ClassName = className;
             this.FilePath = FilePath;
         }
 

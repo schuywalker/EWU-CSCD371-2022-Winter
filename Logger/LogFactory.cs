@@ -9,8 +9,13 @@ namespace Logger
 
         public static FileLogger? CreateLogger(string className)
         {
-            //parse className??
+            if (Path is not null) return new FileLogger(className, Path);
+
+            else return null;
             
+
+
+            /*
             FileLogger logger = new FileLogger(Path);
             logger.ClassName = className;
             ConfigureFileLogger(logger, Path);
