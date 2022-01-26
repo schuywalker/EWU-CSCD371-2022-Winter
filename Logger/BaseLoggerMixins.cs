@@ -15,7 +15,7 @@ namespace Logger
         {
             if (baseLogger == null)
             {
-                Console.WriteLine("LogError: args == null");
+                Console.WriteLine("LogError: baselogger == null");
                 throw new ArgumentNullException(nameof(baseLogger));
             }
 
@@ -31,7 +31,7 @@ namespace Logger
             {
             if(baseLogger == null)
             {
-                Console.WriteLine("LogWarning: args == null");
+                Console.WriteLine("LogWarning: baselogger == null");
                 throw new ArgumentNullException(nameof(baseLogger));
             }
 
@@ -47,7 +47,7 @@ namespace Logger
         {
             if (baseLogger == null)
             {
-                Console.WriteLine("LogInformation: args == null");
+                Console.WriteLine("LogInformation: baselogger == null");
                 throw new ArgumentNullException(nameof(baseLogger));
             }
 
@@ -63,7 +63,7 @@ namespace Logger
         {
             if (baseLogger == null)
             {
-                Console.WriteLine("LogDebug: args == null");
+                Console.WriteLine("LogDebug: baselogger == null");
                 throw new ArgumentNullException(nameof(baseLogger));
             }
 
