@@ -128,5 +128,5 @@ namespace Logger.Tests
             LoggedMessages.Add(p);
         }
     }
-}// Assert.AreEqual<INSERT DATA TYPE>(...)
+}
     
