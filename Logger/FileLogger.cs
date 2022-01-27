@@ -14,7 +14,7 @@ namespace Logger
     public class FileLogger : BaseLogger
     {
 
-        private string FilePath 
+        public string FilePath 
         { get; }
         public FileLogger(string FilePath)
         {
