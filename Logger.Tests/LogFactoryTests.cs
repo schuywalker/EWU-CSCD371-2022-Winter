@@ -10,8 +10,8 @@ namespace Logger.Tests
         public void CreateLogger_ConfigureWithNull_Success()
         {
             // Arrange
-            LogFactory logFactory = new();
-            BaseLogger logger = logFactory.CreateLogger(nameof(LogFactoryTests));
+            LogFactory? logFactory = new();
+            BaseLogger? logger = logFactory.CreateLogger(nameof(LogFactoryTests));
             // Act
 
             // Assert
@@ -24,7 +24,7 @@ namespace Logger.Tests
             // Arrange
             LogFactory logFactory = new();
             logFactory.ConfigureFileLogger("file.txt");
-            BaseLogger logger = logFactory.CreateLogger(nameof(LogFactoryTests));
+            BaseLogger? logger = logFactory.CreateLogger(nameof(LogFactoryTests));
             // Act
             
             // Assert

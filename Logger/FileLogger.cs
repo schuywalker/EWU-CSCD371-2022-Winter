@@ -21,7 +21,7 @@ namespace Logger
             this.FilePath = FilePath;
         }
 
-        public override void Log(LogLevel logLevel, string message)
+        public override void Log(LogLevel? logLevel, string message)
         {
             DateTime dateTime = DateTime.Now;
 

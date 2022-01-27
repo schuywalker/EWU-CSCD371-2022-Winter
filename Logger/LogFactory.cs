@@ -16,7 +16,7 @@ namespace Logger
         }
 
 
-        public BaseLogger CreateLogger(string className) //BaseLogger
+        public BaseLogger? CreateLogger(string className) //BaseLogger
         {
             if (!Configured)
             {
