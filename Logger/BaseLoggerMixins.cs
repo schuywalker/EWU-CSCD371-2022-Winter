@@ -14,7 +14,6 @@ namespace Logger
         {
             if (baseLogger is null)
             {
-                //Console.WriteLine("LogError: baselogger == null");
                 throw new ArgumentNullException(nameof(baseLogger));
             }
             if (message is null)
@@ -24,7 +23,7 @@ namespace Logger
 
             string? debug = String.Format(message, args);
 
-            baseLogger.Log(LogLevel.Debug, debug);
+            baseLogger.Log(LogLevel.Error, debug);
 
         }
 
@@ -44,7 +43,7 @@ namespace Logger
 
             string? debug = String.Format(message, args);
 
-            baseLogger.Log(LogLevel.Debug, debug);
+            baseLogger.Log(LogLevel.Warning, debug);
 
         }
 
@@ -64,7 +63,7 @@ namespace Logger
 
             string? debug = String.Format(message, args);
 
-            baseLogger.Log(LogLevel.Debug, debug);
+            baseLogger.Log(LogLevel.Information, debug);
 
         }
 

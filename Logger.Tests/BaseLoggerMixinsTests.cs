@@ -7,6 +7,7 @@ namespace Logger.Tests
     [TestClass]
     public class BaseLoggerMixinsTests
     {
+        string message = "MixinsTests message";
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -15,9 +16,10 @@ namespace Logger.Tests
             // Arrange
 
             // Act
-            BaseLoggerMixins.LogError(null, "");
+            BaseLoggerMixins.LogWarning(null, "");
 
             // Assert
+            //Assert.ThrowsException<ArgumentNullException>(BaseLoggerMixins.LogError(null, message))
         }
 
         [TestMethod]
@@ -67,7 +69,7 @@ namespace Logger.Tests
 
             // Assert
             Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
-            //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
+            Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
             Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
@@ -82,7 +84,7 @@ namespace Logger.Tests
 
             // Assert
             Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
-            //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
+            Assert.AreEqual(LogLevel.Warning, Logger.LoggedMessages[0].LogLevel);
             Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
@@ -97,7 +99,7 @@ namespace Logger.Tests
 
             // Assert
             Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
-            //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
+            Assert.AreEqual(LogLevel.Information, Logger.LoggedMessages[0].LogLevel);
             Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
@@ -112,7 +114,7 @@ namespace Logger.Tests
 
             // Assert
             Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
-            //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
+            Assert.AreEqual(LogLevel.Debug, Logger.LoggedMessages[0].LogLevel);
             Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
