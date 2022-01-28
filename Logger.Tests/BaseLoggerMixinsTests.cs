@@ -66,9 +66,9 @@ namespace Logger.Tests
             Logger.LogError("Message {0}", 42);
 
             // Assert
-            Assert.AreEqual(1, Logger.LoggedMessages.Count);
+            Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
             //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
-            Assert.AreEqual("Message 42", Logger.LoggedMessages[0].Message);
+            Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
         [TestMethod]
@@ -81,9 +81,9 @@ namespace Logger.Tests
             Logger.LogWarning("Message {0}", 42);
 
             // Assert
-            Assert.AreEqual(1, Logger.LoggedMessages.Count);
+            Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
             //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
-            Assert.AreEqual("Message 42", Logger.LoggedMessages[0].Message);
+            Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
         [TestMethod]
@@ -96,9 +96,9 @@ namespace Logger.Tests
             Logger.LogInformation("Message {0}", 42);
 
             // Assert
-            Assert.AreEqual(1, Logger.LoggedMessages.Count);
+            Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
             //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
-            Assert.AreEqual("Message 42", Logger.LoggedMessages[0].Message);
+            Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
         [TestMethod]
@@ -111,9 +111,9 @@ namespace Logger.Tests
             Logger.LogDebug("Message {0}", 42);
 
             // Assert
-            Assert.AreEqual(1, Logger.LoggedMessages.Count);
+            Assert.AreEqual<int>(1, Logger.LoggedMessages.Count);
             //Assert.AreEqual(LogLevel.Error, Logger.LoggedMessages[0].LogLevel);
-            Assert.AreEqual("Message 42", Logger.LoggedMessages[0].Message);
+            Assert.AreEqual<string>("Message 42", Logger.LoggedMessages[0].Message);
         }
 
     }
