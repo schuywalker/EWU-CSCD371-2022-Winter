@@ -34,18 +34,12 @@ namespace Logger
             // * Code Reference: https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-open-and-append-to-a-log-file
             using (StreamWriter w = File.AppendText("file.txt"))
             {
-                //$"{DateTime.Now} {F}"
                 w.Write(dateTime + "\n");
-                //w.Write(Environment.NewLine);
                 w.Write(this.ClassName + "\n");
-                //w.Write(Environment.NewLine);
                 w.Write(logLevel + "\n");
-                //w.Write(Environment.NewLine);
                 w.Write(message);
-                //w.Write(Environment.NewLine);
             }
 
-            //throw new System.NotImplementedException();
         }
     }
 

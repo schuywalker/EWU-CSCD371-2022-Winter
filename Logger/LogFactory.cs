@@ -6,8 +6,6 @@ namespace Logger
     public class LogFactory   
     {
         private string? Path;
-        //nameof(Logger.BaseLogger.ClassName); //Schuyler: changing this in order to set it in a LogFactory constructor, we can go back if we decide we dont need it!
-        //private string? ClassName;
 
         public bool Configured { get; set; }
         public LogFactory()
@@ -36,10 +34,8 @@ namespace Logger
 
         public void ConfigureFileLogger(string FilePath)
         {
-            
                 Path = FilePath;
                 Configured = true;
-            
         }
         
     }

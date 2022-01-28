@@ -7,7 +7,7 @@ namespace Logger.Tests
     [TestClass]
     public class BaseLoggerMixinsTests
     {
-        string message = "MixinsTests message";
+       
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
