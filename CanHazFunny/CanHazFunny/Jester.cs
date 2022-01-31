@@ -8,23 +8,28 @@ namespace CanHazFunny
 {
     internal class Jester 
     {
-        private JokeService muse;
-        private ConsoleOutput consoleOutput = new();
+        private readonly IJokeService _jokeService;
+        private readonly IConsoleOutput _consoleOutput;
+        public bool returningChuckNorrisJoke { get; set; }
 
-
-        public Jester()
+        public Jester(IConsoleOutput IconsoleOutput, IJokeService IjokeService)
         {
-            muse = new();
+            if (IconsoleOutput is null || IjokeService is null)
+            {
+                throw new ArgumentNullException("an interface arg was null");
+            }
+            _jokeService = IjokeService;
+            _consoleOutput = IconsoleOutput;
         }
        
         
-        public void tellJoke()
+        public void TellJoke()
         {
-            string joke = muse.GetJoke();
-            while (muse.returningChuckNorrisJoke == true)
+            string joke = _jokeService.GetJoke();
+            while (_jokeService.returningChuckNorrisJoke == true)
             {
-                muse.returningChuckNorrisJoke = false;
-                joke = muse.GetJoke();
+                _jokeService.returningChuckNorrisJoke = false;
+                joke = _jokeService.GetJoke();
 
             }
         }
