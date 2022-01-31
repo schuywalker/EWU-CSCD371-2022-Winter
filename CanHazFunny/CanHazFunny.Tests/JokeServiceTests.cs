@@ -7,13 +7,31 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CanHazFunny.Tests
 {
-    internal class JokeServiceTests
+    [TestClass]
+    public class JokeServiceTests
     {
+        
+        [TestMethod]
         public void GetJoke_ReturnsNonNullString_Success()
         {
-            JokeService jokeService = new JokeService();
+            JokeService jokeService = new();
             string joke = jokeService.GetJoke();
             Assert.IsNotNull(joke);
         }
+        [TestMethod]
+        public void GetJoke()
+        {
+
+        }
+        // test chuck norris boolean changed
+
+        //test chuck norris not contained in joke
+
+        // test console
+
     }
+
+
+
 }
+

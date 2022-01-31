@@ -16,15 +16,7 @@ namespace CanHazFunny
         {
             muse = new();
         }
-        /*
-        public string GetJoke()
-        {
-            string? joke = muse.GetJoke();
-            if (joke == null) throw new NullReferenceException();
-            
-            return joke;
-        }
-        */
+       
         
         public void tellJoke()
         {
