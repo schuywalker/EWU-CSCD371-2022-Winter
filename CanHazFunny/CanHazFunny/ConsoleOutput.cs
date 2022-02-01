@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace CanHazFunny
 {
-    internal class ConsoleOutput : IConsoleOutput
+    public class ConsoleOutput : IConsoleOutput
     {
         public void writeJokeToConsole(string joke)
         {
+            if (joke is null)
+            {
+                throw new ArgumentNullException("joke was null in ConsoleOutput.writeJokeToConsole");
+            }
             Console.WriteLine(joke);
         }
     }

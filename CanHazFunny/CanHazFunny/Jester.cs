@@ -6,32 +6,42 @@ using System.Threading.Tasks;
 
 namespace CanHazFunny
 {
-    internal class Jester 
-    {
-        private readonly IJokeService _jokeService;
-        private readonly IConsoleOutput _consoleOutput;
-        public bool returningChuckNorrisJoke { get; set; }
+    internal class Jester // get a joke from joke service. make sure it doesnt have chuck. output it.
+    {   // jester is driver, Idrivable, Idestination. driver can drive a audi or nissan, so long as then implement IDrivable.
+        
+        private IJokeService? jokeService { get; } // set in constructor
+        private IConsoleOutput? consoleOutput;
 
-        public Jester(IConsoleOutput IconsoleOutput, IJokeService IjokeService)
+        public Jester(IJokeService IjokeService, IConsoleOutput IconsoleOutput)
         {
             if (IconsoleOutput is null || IjokeService is null)
             {
-                throw new ArgumentNullException("an interface arg was null");
+                throw new ArgumentNullException("an arg was null");
             }
-            _jokeService = IjokeService;
-            _consoleOutput = IconsoleOutput;
+            jokeService = IjokeService;
+            consoleOutput = IconsoleOutput;
         }
        
-        
+       // jester filters
+       // interface should do what jokeService did by default
+       // liskov - base class extends iserviceable (jokeService) so jokeService can be used as an IServicable
+       
         public void TellJoke()
         {
-            string joke = _jokeService.GetJoke();
-            while (_jokeService.returningChuckNorrisJoke == true)
+            string joke = jokeService!.GetJoke(); // ! because TellJoke cant be called without instance, and constructor checks for null
+            int failSafeCounter = 0;
+            while (joke.Contains("Chuck Norris"))
             {
-                _jokeService.returningChuckNorrisJoke = false;
-                joke = _jokeService.GetJoke();
-
+                joke = jokeService.GetJoke();
+                
+                failSafeCounter++;
+                if (failSafeCounter > 20)
+                {
+                    Console.WriteLine("Either 20 chuck norris jokes in a row or there is a bug");
+                    break;
+                }
             }
+            consoleOutput!.writeJokeToConsole(joke); // same as above - ! because TellJoke cant be called without instance, and constructor checks for null
         }
     }
 }
