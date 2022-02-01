@@ -4,27 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CanHazFunny
-{
-    internal class Jester // get a joke from joke service. make sure it doesnt have chuck. output it.
-    {   // jester is driver, Idrivable, Idestination. driver can drive a audi or nissan, so long as then implement IDrivable.
-        
-        private IJokeService? jokeService { get; } // set in constructor
-        private IConsoleOutput? consoleOutput;
+namespace CanHazFunny;
 
-        public Jester(IJokeService IjokeService, IConsoleOutput IconsoleOutput)
+    public class Jester 
+    {   
+        
+        private IJokeService? jokeService { get; set; } // set in constructor
+        private IConsoleOutput? consoleOutput { get; set; }
+
+        public Jester() // for mocks...
         {
+
+        }
+
+         public Jester(IJokeService IjokeService, IConsoleOutput IconsoleOutput)
+         {
             if (IconsoleOutput is null || IjokeService is null)
             {
                 throw new ArgumentNullException("an arg was null");
             }
             jokeService = IjokeService;
             consoleOutput = IconsoleOutput;
-        }
+         }
        
-       // jester filters
-       // interface should do what jokeService did by default
-       // liskov - base class extends iserviceable (jokeService) so jokeService can be used as an IServicable
+       
        
         public void TellJoke()
         {
@@ -41,7 +44,7 @@ namespace CanHazFunny
                     break;
                 }
             }
-            consoleOutput!.writeJokeToConsole(joke); // same as above - ! because TellJoke cant be called without instance, and constructor checks for null
+            consoleOutput!.WriteJokeToConsole(joke); // same as above - ! because TellJoke cant be called without instance, and constructor checks for null
         }
     }
-}
+

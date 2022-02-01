@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CanHazFunny
 {
-    interface IConsoleOutput
+    public interface IConsoleOutput
     {
-        public void writeJokeToConsole(string joke);
+        public void WriteJokeToConsole(string joke);
     }
 }

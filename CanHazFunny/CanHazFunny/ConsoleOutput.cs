@@ -8,7 +8,7 @@ namespace CanHazFunny
 {
     public class ConsoleOutput : IConsoleOutput
     {
-        public void writeJokeToConsole(string joke)
+        public void WriteJokeToConsole(string joke)
         {
             if (joke is null)
             {

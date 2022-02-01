@@ -19,6 +19,8 @@ namespace CanHazFunny.Tests
             string joke = jokeService.GetJoke();
             
             Assert.IsNotNull(joke);
+            
+            
         }
         [TestMethod]
         public void Contains_ChuckNorris_True()
@@ -30,6 +32,7 @@ namespace CanHazFunny.Tests
             //Assert.IsTrue(testLowerCase.Contains("Chuck Norris"));
             //Assert.IsTrue(testSeparated.Contains("Chuck Norris"));
         }
+       
 
     }
 
