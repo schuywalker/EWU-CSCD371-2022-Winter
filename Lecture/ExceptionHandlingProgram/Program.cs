@@ -11,7 +11,7 @@ class Program
         catch (Exception exception)
         {
             Console.WriteLine(exception.Message);
-            // throw;
+            throw;
         }
     }
 
@@ -24,12 +24,28 @@ class Program
             string? input = Console.ReadLine();
             if (input is not null)
             {
-                number=EnterNumber(number, input);
-            }
-            else
-            {
-                Console.WriteLine("Quit");
-                return;
+                if (input.ToLower() == "stop")
+                {
+                    throw new InvalidOperationException("User is quiting");
+                }
+
+                try
+                {
+                    number=EnterNumber(number, input);
+                }
+                catch(ArgumentNullException)
+                {
+                    Console.WriteLine("Quit");
+                    return;
+                }
+                catch (ArgumentException) 
+                {
+                    Console.WriteLine($"Hey.... {input} is not a number (stupid)!!");
+                }
+                catch(Exception)
+                {
+                    // Never have an empty Exception block
+                }
             }
         }
     }
@@ -38,16 +54,17 @@ class Program
     {
         try
         {
-            number = int.Parse(input);
+            number = int.Parse(input); // Replace with int.TryParse()
             Console.WriteLine($"The value is: {number} ");
         }
-        catch (Exception exception) // Need to change this exception type.
+        catch (FormatException exception) // Need to change this exception type.
         {
             throw new ArgumentException(
                 message:"Input is not a valid integer.", 
                 paramName:nameof(input),
                 innerException: exception);
         }
+
 
         return number;
     }
