@@ -28,9 +28,9 @@ namespace CanHazFunny.Tests;
         {
         ConsoleOutput consoleOutput = new();
         Assert.ThrowsException<ArgumentNullException>(() => consoleOutput.WriteJokeToConsole(null!));
-            // ! because it is intended to be null. (warning says cannot convert null to non-nullable reference type)
+           
         }
-        [TestMethod] // HAS TO BE RUN IN DEBUG MODE - NEED TO FIX THIS
+        [TestMethod]
         public void WriteJokeToConsole_GoodArgument_Success()
         {
             ConsoleOutput consoleOutput1 = new();

@@ -29,17 +29,17 @@ public class Jester
     public void TellJoke()
     {
         string joke = JokeService.GetJoke();
-        int failSafeCounter = 0;
+        //int failSafeCounter = 0;
         while (joke.Contains("Chuck Norris"))
         {
             joke = JokeService.GetJoke();
 
-            failSafeCounter++;
-            if (failSafeCounter > 20)
-            {
-                Console.WriteLine("Either 20 chuck norris jokes in a row or there is a bug");
-                break;
-            }
+            //failSafeCounter++;
+            //if (failSafeCounter > 20)
+            //{
+                //Console.WriteLine("Either 20 chuck norris jokes in a row or there is a bug");
+              //  break;
+            //}
         }
         ConsoleOutput.WriteJokeToConsole(joke);
     }
