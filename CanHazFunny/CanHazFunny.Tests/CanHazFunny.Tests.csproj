@@ -6,6 +6,8 @@
     <IsPackable>false</IsPackable>
 	  <Nullable>enable</Nullable>
 	  <WarningsAsErrors>True</WarningsAsErrors>
+	  <LangVersion>10.0</LangVersion>
+	  <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
   <ItemGroup>

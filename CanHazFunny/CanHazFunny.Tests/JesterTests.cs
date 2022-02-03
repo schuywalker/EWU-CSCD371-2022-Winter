@@ -6,30 +6,39 @@ namespace CanHazFunny.Tests
     [TestClass]
     public class JesterTests
     {
-        Jester? jester;
+       // Jester? jester;
 
         [TestMethod]
-        public void Jester_NullArguments_Exception()
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Jester_NullArgJokeService_Exception()
         {
-            Jester jester;
+           
             ConsoleOutput consoleOutput = new();
             JokeService jokeService = null!;
 
-            Assert.ThrowsException<ArgumentNullException>(() => jester = new(jokeService,consoleOutput));
+            Jester jester = new(jokeService,consoleOutput);
+            
         }
         [TestMethod]
-        public void MyTestMethod()
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Jester_NullArgConsoleOutput_Exception()
+        {
+
+            ConsoleOutput consoleOutput = null!;
+            JokeService jokeService = new();
+
+            Jester jester = new(jokeService, consoleOutput);
+
+        }
+        [TestMethod]
+        public void Test_NotUsedYet()
         {
             JokeService jokeService = new();
             ConsoleOutput consoleOutput = new();
-            jester = new(jokeService, consoleOutput);
+            Jester jester = new(jokeService, consoleOutput);
+        
+        
         }
-        /*[TestMethod]
-        public void Jester_()
-        {
-            Jester mock = new();
-            Assert.IsNotNull(mock)
-
-        }*/
+       
     }
 }
