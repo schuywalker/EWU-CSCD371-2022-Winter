@@ -6,7 +6,7 @@ namespace CanHazFunny.Tests
     [TestClass]
     public class JesterTests
     {
-       // Jester? jester;
+       
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -16,7 +16,7 @@ namespace CanHazFunny.Tests
             ConsoleOutput consoleOutput = new();
             JokeService jokeService = null!;
 
-            Jester jester = new(jokeService,consoleOutput);
+            Jester Jester = new(jokeService,consoleOutput);
             
         }
         [TestMethod]
@@ -27,7 +27,7 @@ namespace CanHazFunny.Tests
             ConsoleOutput consoleOutput = null!;
             JokeService jokeService = new();
 
-            Jester jester = new(jokeService, consoleOutput);
+            Jester Jester = new(jokeService, consoleOutput);
 
         }
         [TestMethod]
@@ -35,9 +35,8 @@ namespace CanHazFunny.Tests
         {
             JokeService jokeService = new();
             ConsoleOutput consoleOutput = new();
-            Jester jester = new(jokeService, consoleOutput);
-        
-        
+            Jester Jester = new(jokeService, consoleOutput);
+            Assert.IsFalse(Jester.TellJoke().ToLower().Contains("chuck norris"));
         }
        
     }

@@ -26,11 +26,7 @@ namespace CanHazFunny.Tests
         public void Contains_ChuckNorris_True()
         {
             string test = "this joke has Chuck Norris in it";
-            //string testLowerCase = "this joke has chuck norris in it";
-            //string testSeparated = "this joke has Chuck and Norris in it";
             Assert.IsTrue(test.Contains("Chuck Norris"));
-            //Assert.IsTrue(testLowerCase.Contains("Chuck Norris"));
-            //Assert.IsTrue(testSeparated.Contains("Chuck Norris"));
         }
        
 

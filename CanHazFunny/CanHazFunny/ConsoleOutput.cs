@@ -10,6 +10,10 @@ namespace CanHazFunny
     {
         public void WriteJokeToConsole(string joke)
         {
+            if (joke is null)
+            {
+                throw new ArgumentNullException("joke should not be null");
+            }
             Console.WriteLine(joke);
         }
     }
