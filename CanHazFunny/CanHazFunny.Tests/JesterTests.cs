@@ -31,7 +31,7 @@ namespace CanHazFunny.Tests
 
         }
         [TestMethod]
-        public void Test_NotUsedYet()
+        public void TellJoke_JokeDoesNotContainChuckNorris_False()
         {
             JokeService jokeService = new();
             ConsoleOutput consoleOutput = new();
