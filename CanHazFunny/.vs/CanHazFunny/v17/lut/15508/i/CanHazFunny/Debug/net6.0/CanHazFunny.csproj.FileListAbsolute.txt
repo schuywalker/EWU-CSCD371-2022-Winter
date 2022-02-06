@@ -1,0 +1,12 @@
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\b\CanHazFunny\Debug\net6.0\CanHazFunny.exe
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\b\CanHazFunny\Debug\net6.0\CanHazFunny.deps.json
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\b\CanHazFunny\Debug\net6.0\CanHazFunny.runtimeconfig.json
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\b\CanHazFunny\Debug\net6.0\CanHazFunny.dll
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\b\CanHazFunny\Debug\net6.0\ref\CanHazFunny.dll
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.AssemblyInfoInputs.cache
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.AssemblyInfo.cs
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.csproj.CopyComplete
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.dll
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\ref\CanHazFunny.dll
+C:\Users\schuy\Source\Repos\EWU-CSCD371-2022-Winter\CanHazFunny\.vs\CanHazFunny\v17\lut\0\i\CanHazFunny\Debug\net6.0\CanHazFunny.genruntimeconfig.cache

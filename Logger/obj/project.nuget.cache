@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dXXGopMw3rsa/2ccC/E/EEMIb6PN1Rb9LODe8G0Y2Qv1jfPx1zuWshOILHP15k4ziuixje6uAdz9D86+Bv26NA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\schuy\\source\\repos\\EWU-CSCD371-2022-Winter\\Logger\\Logger.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\schuy\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\schuy\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

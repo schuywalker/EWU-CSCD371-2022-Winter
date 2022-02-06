@@ -1,0 +1,139 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture.Tests\\Lecture.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture.Tests\\Lecture.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture.Tests\\Lecture.Tests.csproj",
+        "projectName": "Lecture.Tests",
+        "projectPath": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture.Tests\\Lecture.Tests.csproj",
+        "packagesPath": "C:\\Users\\schuy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\schuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\Lecture.csproj": {
+                "projectPath": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\Lecture.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\Lecture.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\Lecture.csproj",
+        "projectName": "Lecture",
+        "projectPath": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\Lecture.csproj",
+        "packagesPath": "C:\\Users\\schuy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\schuy\\Source\\Repos\\EWU-CSCD371-2022-Winter\\Lecture\\Lecture\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\schuy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
