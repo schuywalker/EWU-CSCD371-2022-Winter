@@ -9,7 +9,7 @@ public class Thing : ISavable
         Name=name;
     }
 
-    public virtual string? ToText()
+    public virtual string ToText()
     {
         return $"{nameof(Name)}: {Name}";
     }

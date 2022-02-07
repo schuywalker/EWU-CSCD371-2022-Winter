@@ -18,7 +18,7 @@ public record class Person : ISavable
         Name = name;
     }
 
-    public string? ToText() => $"{nameof(Name)}: {Name}; {nameof(DateOfBirth)}: {DateOfBirth}";
+    public string ToText() => $"{nameof(Name)}: {Name}; {nameof(DateOfBirth)}: {DateOfBirth}";
 
     //public int Age
     //{

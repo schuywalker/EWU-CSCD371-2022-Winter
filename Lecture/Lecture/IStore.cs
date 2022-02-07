@@ -2,6 +2,6 @@
 {
     public interface IStore
     {
-        void Save(ISavable savable);
+        void Save(ISavable item);
     }
 }

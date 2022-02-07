@@ -8,9 +8,7 @@ public class Document : Thing, ISavable, ISerializable
     public Document(string name)
         :base(name)=> Name = name;
 
-    string ISavable.ToText() => $"{nameof(Name)}: {Name}";
-
-    public override string? ToText() => Content;
+    public override string ToText() => $"{nameof(Name)}: {Name}, {nameof(Content)}: {Content}";
 
     void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
     {

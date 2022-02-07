@@ -1,7 +1,7 @@
 ﻿
 class Program
 {
-    public static void Main(string[] args)
+    public static void Main()
     {
         try
         {
@@ -31,7 +31,7 @@ class Program
 
                 try
                 {
-                    number=EnterNumber(number, input);
+                    number=EnterNumber(input);
                 }
                 catch(ArgumentNullException)
                 {
@@ -50,8 +50,9 @@ class Program
         }
     }
 
-    private static int? EnterNumber(int? number, string input)
+    private static int? EnterNumber(string input)
     {
+        int number;
         try
         {
             number = int.Parse(input); // Replace with int.TryParse()

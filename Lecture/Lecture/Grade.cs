@@ -12,10 +12,10 @@ public enum Grade : int
 
 
 [Flags]
-public enum FileAttribute : int
+public enum FileAttributes : int
 {
     None,
     Hidden,
     ReadOnly,
-    System = Hidden & ReadOnly
+    System = Hidden | ReadOnly
 }
