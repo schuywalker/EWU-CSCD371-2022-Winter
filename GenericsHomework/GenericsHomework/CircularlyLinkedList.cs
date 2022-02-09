@@ -110,7 +110,7 @@ public class CircularlyLinkedList<T>
             NodeType = t;
             Next = this;
             Index = index;
-        }
+        }//
         
 
         public Node([DisallowNull] TNodeData t, Node<TNodeData> Tail, int index)
