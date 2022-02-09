@@ -46,8 +46,8 @@ public class CircularlyLinkedList<T>
         else
         {
 
-            Node<T> temp = new(t, Tail.Index + 1);
-            ///////constructor here or move method to node. if here we need to overloadx
+            Node<T> temp = new(t, Tail, Tail.Index + 1);
+            
         }
         Size++;
     }
@@ -110,7 +110,7 @@ public class CircularlyLinkedList<T>
             NodeType = t;
             Next = this;
             Index = index;
-        }//
+        }
         
 
         public Node([DisallowNull] TNodeData t, Node<TNodeData> Tail, int index)

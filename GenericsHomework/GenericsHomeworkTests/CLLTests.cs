@@ -6,8 +6,13 @@ namespace GenericsHomeworkTests
     public class CLLTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Exists_TypeIsPresent_Success()
         {
+        }
+        [TestMethod]
+        public void Exists_TypeIsNotPresent_Failure()
+        {
+
         }
     }
 }
