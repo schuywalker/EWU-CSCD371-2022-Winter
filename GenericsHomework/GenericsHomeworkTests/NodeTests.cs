@@ -14,8 +14,7 @@ namespace GenericsHomework.Tests
         [TestMethod]
         public void Node_DataTypeAsExcepted_Success()
         {
-            CircularlyLinkedList<string> cll = new();
-            cll.Append(String);
+            
         }
         public void NodeConstructor_NextSetToSelf_Success()
         {

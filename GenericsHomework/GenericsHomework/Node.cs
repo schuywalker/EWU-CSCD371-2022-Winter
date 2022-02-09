@@ -13,38 +13,50 @@ where T : notnull
 
     [DisallowNull]
     public Node<T> Next { get; private set; }
-    public int Index { get; set; }
+    public T Value { get; private set; }
 
-    [DisallowNull]
-    public T NodeType { get; set; }
+    
+   
 
-    public Node([DisallowNull] T t)
+    public Node([DisallowNull] T value)
     { 
-
-        NodeType = t;
+        Value = value;
         Next = this;
-
     }
 
 
-    public Node([DisallowNull] T t, [DisallowNull] Node<T> Tail)
-    { 
-        NodeType = t;
-
-        Next = Tail.Next;// AKA Head
-        Tail.Next = this;
-        Tail = this;
-
-    }
-    public Node([DisallowNull] Node<T> node)
+    public void Append(T t)
     {
-        node.Next = node;
+        Node<T> newNode = new(t);
+        newNode.Next = this.Next;
+        this.Next = newNode;
     }
+
+    public Node<T> Clear()
+    {
+        Next = this;
+        return this;
+    }
+    public bool Exists([DisallowNull] T value)
+    {
+        if (this.Value.Equals(value)) return true;
+        else if (this.Next == this) return false; //this is not of the queried type and there are no other nodes in the list
+        Node<T> cursor = this.Next;
+        while (cursor != this)
+        {
+            if (cursor.Value.Equals(value)) return true;
+            cursor = cursor.Next;
+        }
+        return false;
+        
+    }
+    
+
 
 
     public override string ToString()
     {
-        return "Node of type " + typeof(T) + " with index: " + Index;
+        return "Node of type " + typeof(T);
     }
 
 }
