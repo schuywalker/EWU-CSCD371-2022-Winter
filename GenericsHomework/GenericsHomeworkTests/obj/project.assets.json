@@ -1660,6 +1660,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "GenericsHomework/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/GenericsHomework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GenericsHomework.dll": {}
+        }
       }
     }
   },
@@ -6193,10 +6203,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "GenericsHomework/1.0.0": {
+      "type": "project",
+      "path": "../GenericsHomework/GenericsHomework.csproj",
+      "msbuildProject": "../GenericsHomework/GenericsHomework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "GenericsHomework >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.7",
       "MSTest.TestFramework >= 2.2.7",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
@@ -6229,7 +6245,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\schuy\\source\\repos\\EWU-CSCD371-2022-Winter\\GenericsHomework\\GenericsHomework\\GenericsHomework.csproj": {
+              "projectPath": "C:\\Users\\schuy\\source\\repos\\EWU-CSCD371-2022-Winter\\GenericsHomework\\GenericsHomework\\GenericsHomework.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

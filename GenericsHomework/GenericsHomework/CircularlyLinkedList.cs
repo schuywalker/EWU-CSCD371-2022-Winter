@@ -7,33 +7,49 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace GenericsHomework;
 
-    public class CircularlyLinkedList<T>
+public class CircularlyLinkedList<T>
+    where T : notnull
 
-       
-    {
+{
 
-    //public int Size { get; private set; } = 0;
-    public Node<T>? Cursor { get; set; }
+    public Node<T>? Tail { get; set; }
     public Node<T>? Head { get; set; }
     public int Size { get; private set; } = 0;
-    
+
     public T this[int index]
     {
-        get => ReturnType(index)!; // if null, exception is thrown  
+
+        get
+        {
+            if (Tail is null || Head is null) throw new InvalidOperationException();
+            else
+            {
+                return ReturnType(index)!; // if null, exception is thrown  
+            }
+
+        }
     }
 
 
 
 
-    
-
-    public void Append(Node<T> newNode)
+    public void Append([DisallowNull] T t) // with no set next, append will need node to set next in constructor, and append will
+        //need to make new(). therefore append must be in the Node class.
     {
-        
+        if (Head is null || Tail is null)
+        {
 
-        //Size++;
+            Node<T> newNode = new(t, 0);
+            Head = newNode;
+            Tail = newNode;
+        }
+        else
+        {
 
-
+            Node<T> temp = new(t, Tail.Index + 1);
+            ///////constructor here or move method to node. if here we need to overloadx
+        }
+        Size++;
     }
 
     public void Clear()
@@ -44,15 +60,16 @@ namespace GenericsHomework;
     {
         return false;
     }
-    public T? ReturnType(int index)
+    public T ReturnType(int index)
     {
-        Node<T> CursorTemp = Cursor!;//about to be null checked
-        if (Cursor is null || Head is null) throw new InvalidOperationException();
-        else if (index == Cursor.Index)
-        {
-            return Cursor.NodeType;
-        }
         
+        Node<T> CursorTemp = Tail!;//about to be null checked
+        if (Tail is null || Head is null) throw new InvalidOperationException();
+        else if (index == Tail.Index)
+        {
+            return Tail.NodeType;
+        }
+
         else if (CursorTemp.Index < index)
         {
 
@@ -74,40 +91,45 @@ namespace GenericsHomework;
     }
 
 
-    public class Node<TNodeType>
-    //where T : notnull, new()
+
+    public class Node<TNodeData>
+    where TNodeData : notnull
 
     {
-        
-        public Node<TNodeType> Next { get; private set; }
+
+        [DisallowNull]
+        public Node<TNodeData> Next { get; private set; }
         public int Index { get; set; }
-
-        public Node(T t, Node<TNodeType>? next, int index)
-        {
-            if (next is null)
-            {
-                Next = this;
-            }
-            else
-            {
-                Next = next;
-            }
-            NodeType = t;
-        }
-
-        //public void SetNext(Node<TNodeType> next)
-        //{
-        //    Next = next;
-        //}
         
         [DisallowNull]
-        public T NodeType { get; set; }
+        public TNodeData NodeType { get; set; }
+
+        public Node([DisallowNull] TNodeData t, int index)
+        { // type of Node is always T, but once it's in node, we call it TNodeData
+
+            NodeType = t;
+            Next = this;
+            Index = index;
+        }
         
+
+        public Node([DisallowNull] TNodeData t, Node<TNodeData> Tail, int index)
+        { // type of Node is always T, but once it's in node, we call it TNodeData
+
+            NodeType = t;
+            Index = index;
+
+            Next = Tail.Next;// AKA Head
+            Tail.Next = this;
+            Tail = this;
+
+           
+        }
 
 
         public override string ToString()
         {
-            return "Node of type " + typeof(T); //+ " with index: " + Index;
+            return "Node of type " + typeof(T) + " with index: " + Index;
         }
 
     }
@@ -115,3 +137,5 @@ namespace GenericsHomework;
 
 }
 
+// interesting interview question:
+// im writing method, you pass me node, return whether the node in question eventually ends in null or circles back on itself
