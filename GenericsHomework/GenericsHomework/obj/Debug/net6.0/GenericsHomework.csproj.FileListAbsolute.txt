@@ -1,0 +1,15 @@
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.csproj.AssemblyReference.cache
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.AssemblyInfoInputs.cache
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.AssemblyInfo.cs
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.csproj.CoreCompileInputs.cache
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\GenericsHomework.exe
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\GenericsHomework.deps.json
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\GenericsHomework.runtimeconfig.json
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\GenericsHomework.dll
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\ref\GenericsHomework.dll
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\bin\Debug\net6.0\GenericsHomework.pdb
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.dll
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\ref\GenericsHomework.dll
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.pdb
+C:\Users\schuy\source\repos\EWU-CSCD371-2022-Winter\GenericsHomework\GenericsHomework\obj\Debug\net6.0\GenericsHomework.genruntimeconfig.cache
