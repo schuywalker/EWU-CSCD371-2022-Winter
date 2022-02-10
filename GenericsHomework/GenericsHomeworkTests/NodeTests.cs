@@ -68,7 +68,20 @@ namespace GenericsHomework.Tests
         [TestMethod]
         public void Clear_WorksOnLastNode()
         {
-            
+            Node<string> testNode = new("first node string value");
+            testNode.Append("2nd node 42");
+            testNode.Next.Append("3 is magic");
+            Node<string> cursor = testNode.Next.Next;
+
+            cursor.Clear();
+            Assert.AreEqual<string>("3 is magic", cursor.Value);
+            Assert.AreEqual<string>("3 is magic", cursor.Next.Value);
+
+            // idea:
+            // add moq here, return cursor or something, and then test to see 
+            // if testNode has value after the moq. If it doesnt, then that shows that outside the scope
+            // even though we returned testNode, cursor had nothing pointing to it
+            // and has be sufficiently garbage collected
         }
 
         [TestMethod]
