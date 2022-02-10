@@ -15,11 +15,10 @@ where T : notnull
     public Node<T> Next { get; private set; }
     public T Value { get; private set; }
 
-    
-   
 
-    public Node([DisallowNull] T value)
-    { 
+    public Node(T value)
+    {
+        if (value is null) throw new ArgumentNullException("value cant be null");
         Value = value;
         Next = this;
     }

@@ -12,12 +12,12 @@ namespace GenericsHomework.Tests
     public class MyTestClass
     {
 
-        //[TestMethod]
-        //[ExpectedException()]
-        //public void Node_NullArg_Exception()
-        //{
-        //    Node<string> test = new(null!);
-        //}
+        [TestMethod]
+        public void Node_NullArg_Exception()
+        {
+            Node<string> test;
+            Assert.ThrowsException<ArgumentNullException>(() => test = new(null!));
+        }
 
 
         [TestMethod]
@@ -56,6 +56,41 @@ namespace GenericsHomework.Tests
             Assert.AreEqual<string>("first node string value", testNode.Value);
             Assert.AreEqual<string>("first node string value", testNode.Next.Value);
         }
+
+        [TestMethod]
+        public void Exists_ValuePresentAndSizeGreaterThan1_Sucess()
+        {
+            Node<string> testNode = new("first node string value");
+            testNode.Append("2nd node 42");
+            testNode.Next.Append("3 is magic");
+
+            Assert.IsTrue(testNode.Exists("3 is magic"));
+        }
+        [TestMethod]
+        public void Exists_ValueNotPresentAndSizeGreaterThan1_Sucess()
+        {
+            Node<string> testNode = new("first node string value");
+            testNode.Append("2nd node 42");
+            testNode.Next.Append("3 is magic");
+
+            Assert.IsFalse(testNode.Exists("strawberry fields 4ever"));
+        }
+        [TestMethod]
+        public void Exists_ValuePresentAndSizeIs1_Sucess()
+        {
+            Node<int> testNode = new(777);
+            
+
+            Assert.IsTrue(testNode.Exists(777));
+        }
+        [TestMethod]
+        public void Exists_ValueNotPresentAndSizeIs1_Sucess()
+        {
+            Node<int> testNode = new(777);
+
+            Assert.IsFalse(testNode.Exists(42));
+        }
+
     }
 
 }
