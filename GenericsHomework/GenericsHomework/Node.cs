@@ -24,9 +24,13 @@ where T : notnull
     }
 
 
-    public void Append(T t)
+    public void Append(T value)
     {
-        Node<T> newNode = new(t);
+        if (Exists(value))
+        {
+            throw new InvalidOperationException("Can't append duplicate values");
+        }
+        Node<T> newNode = new(value);
         newNode.Next = this.Next;
         this.Next = newNode;
     }

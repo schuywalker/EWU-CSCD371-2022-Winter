@@ -19,13 +19,13 @@ namespace GenericsHomework.Tests
             Assert.ThrowsException<ArgumentNullException>(() => test = new(null!));
         }
 
-
         [TestMethod]
         public void Node_SingleNodePointsToSelf_Success()
         {
             Node<string> testNode = new("test string");
             Assert.AreEqual<string>("test string", testNode.Next.Value);
         }
+        
         [TestMethod]
         public void Append_ListIsCircular_Success()
         {
@@ -45,6 +45,15 @@ namespace GenericsHomework.Tests
             Assert.IsTrue(Cursor == testNode);
 
         }
+
+        [TestMethod]
+        public void Append_DuplicateValue_Exception()
+        {
+            Node<double> testNode = new(0.0);
+            testNode.Append(42);
+            Assert.ThrowsException<InvalidOperationException>(() => testNode.Append(0.0));
+        }
+
         [TestMethod]
         public void Clear_WorksOnFirstNode_Success()
         {
@@ -55,6 +64,11 @@ namespace GenericsHomework.Tests
             testNode.Clear();
             Assert.AreEqual<string>("first node string value", testNode.Value);
             Assert.AreEqual<string>("first node string value", testNode.Next.Value);
+        }
+        [TestMethod]
+        public void Clear_WorksOnLastNode()
+        {
+            
         }
 
         [TestMethod]
