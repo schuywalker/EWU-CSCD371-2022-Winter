@@ -1,0 +1,35 @@
+.heading {
+    background-color: black;
+    margin: 0px 25px;
+    padding: 30px;
+    height: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: nowrap; */
+    overflow: hidden;
+    align-items: center;
+}
+body {
+    height: 70%;
+}
+.ewu {
+    justify-content: left;
+    font-size: 3rem;
+    color: red;
+    flex-grow: 1;
+    font-weight: lighter;
+}
+
+.menu {
+    justify-content: right;
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+}
+.header-text {
+    font-weight: 100;
+}
+
+body {
+    background-color: white;
+}
