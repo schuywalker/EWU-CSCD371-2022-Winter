@@ -33,3 +33,37 @@ body {
 body {
     background-color: white;
 }
+
+.jokeCard {
+    overflow:hidden;
+    margin-top: 2rem;
+    
+    box-shadow: 0 4px 8px rgba(0,0,0,.15);
+    width: 40%;
+    border-width: 1px;
+    border-color:rgb(120, 120, 120);
+    border-radius: 7px;
+    border-style: solid;
+    transition: 1.5s;
+}
+
+.jokeCard:hover{
+    box-shadow:  5px 10px rgba(0,0,0,.15);
+}
+
+.jokePage{
+    border-top: 2px solid rgb(120, 120, 120)
+}
+
+.aJoke{
+    margin: 0;
+    background-color: gray;
+    /* border-top-left-radius: 7px; */
+    /* border-top-right-radius: 7px; */
+}
+
+.jokeLine2{
+    border-bottom: 1px solid rgb(120,120,120);
+}
+
+

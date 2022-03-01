@@ -2,9 +2,9 @@
 <html lang="en-us">
     <head>
         <link rel="stylesheet" href="./Resources/css/site.css" />
-        <script src="https://kit.fontawesome.com/6a857243bf.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1ae849763.js" crossorigin="anonymous"></script>
         <title>schuyler asplin and ray tanner 371 assignment7+8</title>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js%22%3E"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <div class="heading">
@@ -16,23 +16,27 @@
         </div>
 
         <div><h1>The Joke Page</h1></div>
-        <div class="divider"></div>
-        <div>
+        <hr class = jokePage />
+        <!-- <div class="divider"></div> -->
+
+        <div class="jokeCard">
             <table class="table">
                 <tr>
-                    <h3>A Joke</h3>
+                    <h3 class = "aJoke">A Joke</h3>
                 </tr>
-                <tr class="question"></tr>
-                <tr class="punchline"></tr>
-                <tr class="tableFoot">
-                    <a href="https://v2.jokeapi.dev/joke/Programming"
-                        ><button onclick="getJoke()">Another Joke</button></a
-                    >
+                <tr><p  class = "jokeLine1"></p></tr>
+                <tr><p  class = "jokeLine2"></p></tr>
 
-                    <button>Joke API</button>
+                <tr class="tableFoot">
+                    <button class = "jokeButton">Another Joke</button>
+
+                    <a href="https://v2.jokeapi.dev/joke/">
+                        <button>Joke API</button>
+                    </a>
                 </tr>
             </table>
         </div>
+
         <script src="./Resources/js/index.js"></script>
     </body>
 </html>
