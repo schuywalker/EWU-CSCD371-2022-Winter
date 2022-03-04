@@ -6,7 +6,7 @@
         <title>schuyler asplin and ray tanner 371 assignment7+8</title>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
-    <body>
+    <body class="page-body">
         <div class="heading">
             <div class="ewu">EWU</div>
             <div class="menu">
@@ -16,25 +16,21 @@
         </div>
 
         <div><h1>The Joke Page</h1></div>
-        <hr class = jokePage />
-        <!-- <div class="divider"></div> -->
+        <hr class="joke-page-divider" />
 
-        <div class="jokeCard">
-            <table class="table">
-                <tr>
-                    <h3 class = "aJoke">A Joke</h3>
-                </tr>
-                <tr><p  class = "jokeLine1"></p></tr>
-                <tr><p  class = "jokeLine2"></p></tr>
+        <div class="joke-card">
+            <header class="card-header">A Joke</header>
+            <body class="card-body">
+                <p class="joke-line1"></p>
+                <p class="joke-line2"></p>
+            </body>
+            <footer class="card-footer">
+                <button class="joke-button">Another Joke</button>
 
-                <tr class="tableFoot">
-                    <button class = "jokeButton">Another Joke</button>
-
-                    <a href="https://v2.jokeapi.dev/joke/">
-                        <button>Joke API</button>
-                    </a>
-                </tr>
-            </table>
+                <!-- <a href="https://v2.jokeapi.dev/joke/"> -->
+                <button>Joke API</button>
+                <!-- </a> -->
+            </footer>
         </div>
 
         <script src="./Resources/js/index.js"></script>
