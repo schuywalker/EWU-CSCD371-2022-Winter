@@ -10,8 +10,8 @@
     align-items: center;
 }
 body {
-    height: 70%;
-    padding: 0px 15%;
+    width: 70%;
+    margin: auto;
 }
 .ewu {
     justify-content: left;
@@ -77,3 +77,11 @@ body {
 .joke-line2 {
     border-bottom: 1px solid rgb(120, 120, 120);
 }
+
+
+
+
+/* @media large width is default
+medium xPx etc
+*/
+

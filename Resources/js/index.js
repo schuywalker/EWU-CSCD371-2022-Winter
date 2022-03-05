@@ -16,3 +16,7 @@ function getJoke() {
 function delayPunchline(joke) {
     document.getElementsByClassName("joke-line2")[0].innerHTML = joke;
 }
+
+function revealMenu() {
+    console.log("menuuuuuuu");
+}
