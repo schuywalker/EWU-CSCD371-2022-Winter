@@ -11,8 +11,20 @@
 }
 
 body {
-    width: 70%;
+    
     margin: auto;
+}
+
+button {
+    
+    background: rgb(36,19,0);
+    background: linear-gradient(90deg, rgba(36,19,0,1) 0%, rgba(59,0,0,1) 80%, rgba(255,0,0,1) 100%);
+    color:white;
+    border-radius: 12px;
+}
+
+button:hover {
+    background: rgb(0,0,0);
 }
 
 .ewu {
@@ -32,10 +44,12 @@ body {
 
 .dropdown-menu {
     /* display: none; */
-    margin-top: 8px;
-    justify-content: right;
+    right:0%;
+    width: 30%; 
+    margin-top: 2px;
     position: absolute;
     padding : 10px;
+    background-color: white;
     border-style: solid;
     border-color: rgb(120, 120, 120);
     border-width: 4px;
@@ -43,7 +57,16 @@ body {
 }
 .dropdown-menu ul {
     padding:0;
+    width:auto;
     list-style-type:none;
+}
+
+.dropdown-menu ul li {
+    margin-bottom :5px;
+}
+
+.dropdown-menu ul li button{
+    width:100%;
 }
 
 .header-text {
@@ -51,6 +74,8 @@ body {
 }
 
 .page-body {
+    position:relative;
+    width: 70%;
     background-color: white;
 }
 
