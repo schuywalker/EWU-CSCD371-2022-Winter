@@ -35,7 +35,7 @@ Just like when working as a software developer, the web will be your primary sou
 
 -   The page should have a title/menu bar ✔
     -   Use Font Awesome for the hamburger icon (https://fontawesome.com/start) ✔
-    -   When clicked, the menu should appear under it ✔
+    -   When clicked, the menu should appear under it ❌✔
     -   The menu should have four buttons with creative names (the buttons don't need to do anything) ❌✔
 
 ### Create a card with `<div>`s and CSS
