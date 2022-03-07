@@ -43,7 +43,7 @@ button:hover {
 }
 
 .dropdown-menu {
-    /* display: none; */
+    display: none;
     right:0%;
     width: 30%; 
     margin-top: 2px;
