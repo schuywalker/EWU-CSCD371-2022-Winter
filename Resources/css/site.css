@@ -11,9 +11,15 @@
 }
 
 body {
-    
+    transition: 2s;
     margin: auto;
 }
+
+.invert{
+    transform:rotate(180deg);
+}
+
+
 
 button {
     
@@ -120,6 +126,12 @@ button:hover {
 }
 .joke-line2 {
     border-bottom: 1px solid rgb(120, 120, 120);
+}
+.shy{
+    transition: 7s;
+}
+.shy:hover{
+    color: red;
 }
 
 /* @media large width is default

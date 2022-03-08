@@ -1,6 +1,7 @@
 document.getElementsByClassName("joke-button")[0].addEventListener("click", getJoke);
 
 var menuDisplayed = false;
+var flipped = false;
 
 function getJoke() {
     axios.get("https://v2.jokeapi.dev/joke/Programming").then((response) => {
@@ -10,6 +11,7 @@ function getJoke() {
             document.getElementsByClassName("joke-line2")[0].innerHTML = "";
         } else {
             document.getElementsByClassName("joke-line1")[0].innerHTML = response.data.setup;
+            document.getElementsByClassName("joke-line2")[0].innerHTML = "";
             setTimeout(delayPunchline, 4000, response.data.delivery);
         }
     }).catch(function (error) {
@@ -34,4 +36,13 @@ function revealMenu() {
     }
     
         
+}
+
+function flipBody(){
+    flipped = !flipped;
+    if (flipped){
+    document.getElementsByTagName("body")[0].classList.add("invert")
+    } else {
+        document.getElementsByTagName("body")[0].classList.remove("invert");
+    }
 }
