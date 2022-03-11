@@ -22,9 +22,15 @@
         <div class="dropdown-menu">
             <ul>
                 <li class="dropdown-item-1"><button onclick="flipBody()">Hard Mode</button></li>
-                <li class="dropdown-item-2"><button class = "shy">I'm shy, don't touch !</button></li>
-                <li class="dropdown-item-3"><a href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" target = "_blank"><button>Debug Log (Opens New tab)</button></a></li>
-                <li class="dropdown-item-4"><button>creativeThing</button></li>
+                <li class="dropdown-item-2"><button class="shy">I'm shy, don't touch !</button></li>
+                <li class="dropdown-item-3">
+                    <button>Debug Log (Opens New tab)</button>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"></a>
+                </li>
+                <li class="dropdown-item-4">
+                    <div></div>
+                    <button onclick="winBigBaby()" class="money-button">WIN BIG</button>
+                </li>
             </ul>
         </div>
 
@@ -33,13 +39,12 @@
 
         <div class="joke-card">
             <header class="card-header">A Joke</header>
-            <body class="card-body">
+            <div class="card-body">
                 <p class="joke-line1"></p>
                 <p class="joke-line2"></p>
-            </body>
+            </div>
             <footer class="card-footer">
                 <button class="main-buttons joke-button">Another Joke</button>
-
                 <a href="https://v2.jokeapi.dev/joke/">
                     <button class="main-buttons api-button">Joke API</button>
                 </a>

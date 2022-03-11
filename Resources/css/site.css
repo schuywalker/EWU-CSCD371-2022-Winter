@@ -8,11 +8,13 @@
 }
 
 body {
-<<<<<<< Updated upstream
-    transition: 2s;
-=======
->>>>>>> Stashed changes
     margin: auto;
+}
+/* .money-body {
+    background-image: url("../../piles-of-big-money.jpeg");
+} */
+
+.money-button {
 }
 
 .invert {
@@ -74,13 +76,14 @@ button:hover {
 }
 
 .dropdown-menu ul {
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     width: auto;
     list-style-type: none;
 }
 
 .dropdown-menu ul li {
-    margin-bottom: 5px;
+    margin: 3px 0px;
 }
 
 .dropdown-menu ul li button {
@@ -122,7 +125,7 @@ button:hover {
     padding: 10px;
 }
 .card-body {
-    padding: 10px;
+    padding: 30px 10px;
 }
 
 .card-footer {
@@ -130,11 +133,12 @@ button:hover {
 }
 
 .joke-line1 {
-    padding: 30px, 10px;
+    margin: 30px 10px;
 }
 
 .joke-line2 {
     border-bottom: 1px solid rgb(120, 120, 120);
+    margin: 30px 10px;
 }
 .shy {
     transition: 7s;
@@ -143,6 +147,4 @@ button:hover {
     color: red;
 }
 
-/* @media large width is default
-medium xPx etc
-*/
+/* @media large width is default medium xPx etc; */
