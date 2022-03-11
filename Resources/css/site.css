@@ -1,36 +1,48 @@
 .heading {
     background-color: black;
-    /* margin: 0px 25px; */
     padding: 20px;
     height: 20px;
     display: flex;
-    /* flex-direction: column; */
-    /* flex-wrap: nowrap; */
     overflow: hidden;
     align-items: center;
 }
 
 body {
+<<<<<<< Updated upstream
     transition: 2s;
+=======
+>>>>>>> Stashed changes
     margin: auto;
 }
 
-.invert{
-    transform:rotate(180deg);
+.invert {
+    transform: rotate(180deg);
 }
 
-
-
 button {
-    
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,111,1) 0%, rgba(0,212,255,1) 100%);
-    color:white;
-    border-radius: 12px;
+    min-height: 40px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 121, 111, 1) 0%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    color: white;
+    border-radius: 4px;
+}
+
+.joke-button {
+    border-radius: 0px;
+}
+
+.api-button {
+    background: #d1d0d0;
+    color: black;
 }
 
 button:hover {
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
 }
 
 .ewu {
@@ -50,29 +62,29 @@ button:hover {
 
 .dropdown-menu {
     display: none;
-    right:0%;
-    width: 30%; 
+    right: 0%;
+    width: 30%;
     margin-top: 2px;
     position: absolute;
-    padding : 10px;
+    padding: 10px;
     background-color: white;
     border-style: solid;
     border-color: rgb(120, 120, 120);
     border-width: 4px;
-
 }
+
 .dropdown-menu ul {
-    padding:0;
-    width:auto;
-    list-style-type:none;
+    padding: 0;
+    width: auto;
+    list-style-type: none;
 }
 
 .dropdown-menu ul li {
-    margin-bottom :5px;
+    margin-bottom: 5px;
 }
 
-.dropdown-menu ul li button{
-    width:100%;
+.dropdown-menu ul li button {
+    width: 100%;
 }
 
 .header-text {
@@ -80,7 +92,7 @@ button:hover {
 }
 
 .page-body {
-    position:relative;
+    position: relative;
     width: 70%;
     background-color: white;
 }
@@ -90,15 +102,11 @@ button:hover {
 }
 
 .joke-card {
-    /* overflow: hidden; */
-    /* margin-top: 2rem; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-width: 1px;
     border-color: rgb(120, 120, 120);
     border-radius: 7px;
     border-style: solid;
-
-    /* transition: 1.5s; */
 }
 
 .joke-card:hover {
@@ -112,25 +120,26 @@ button:hover {
     font-size: 1.5rem;
     margin: 0px;
     padding: 10px;
-    /* border-top-left-radius: 7px; */
-    /* border-top-right-radius: 7px; */
 }
 .card-body {
     padding: 10px;
 }
+
 .card-footer {
     padding: 10px;
 }
 
 .joke-line1 {
+    padding: 30px, 10px;
 }
+
 .joke-line2 {
     border-bottom: 1px solid rgb(120, 120, 120);
 }
-.shy{
+.shy {
     transition: 7s;
 }
-.shy:hover{
+.shy:hover {
     color: red;
 }
 
