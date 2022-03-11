@@ -1,9 +1,8 @@
 document.getElementsByClassName("joke-button")[0].addEventListener("click", getJoke);
-document.getElementsByClassName("money-button")[0].addEventListener("click", winBigBaby);
 
 var menuDisplayed = false;
 var flipped = false;
-const winning = false;
+var winning = false;
 
 function getJoke() {
     axios
@@ -50,14 +49,18 @@ function flipBody() {
 }
 
 function winBigBaby() {
+    /*other way to do it
+    // winning = !winning;
+    // if (winning) {
+    //     document.getElementsByTagName("body")[0].classList.add("add-money");
+    // } else {
+    //     document.getElementsByTagName("body")[0].classList.remove("add-money");
+ } */
     winning = !winning;
     if (winning) {
-        document
-            .getElementsByTagName("body")[0]
-            .classList.add("background-image: ./piles-of-big-money.jpeg");
+        document.getElementsByTagName("body")[0].style.backgroundImage =
+            "url('./piles-of-big-money.jpeg')";
     } else {
-        document
-            .getElementsByTagName("body")[0]
-            .classList.remove("background-image: ./piles-of-big-money.jpeg");
+        document.getElementsByTagName("body")[0].style.backgroundImage = "none";
     }
 }

@@ -9,12 +9,10 @@
 
 body {
     margin: auto;
+    background-image: none;
 }
-/* .money-body {
+.add-money {
     background-image: url("../../piles-of-big-money.jpeg");
-} */
-
-.money-button {
 }
 
 .invert {
