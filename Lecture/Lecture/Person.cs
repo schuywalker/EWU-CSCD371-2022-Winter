@@ -1,13 +1,16 @@
-﻿namespace Lecture;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Lecture;
 
 
 public record class Person : ISavable
 {
 
-    public Person(string firstName, string lastName) : 
-        this($"{firstName} {lastName}") {}
+    public Person(string firstName, string lastName) :
+        this($"{firstName} {lastName}")
+    { }
 
-    public Person(string name) 
+    public Person(string name)
     {
         Initialize(name);
     }
@@ -35,25 +38,31 @@ public record class Person : ISavable
 
 
     private string? _Name;
+
+    [SuppressMessage("Maintainability", "CA1508:Avoid dead conditional code", 
+        Justification = "This warning is just wrong! 'value' could be Empty or WhiteSpace.")]
     public string Name
     {
         get => _Name!;
 
-        set { 
-            if(value is null) { throw new ArgumentNullException(nameof(value)); }
-            if(string.IsNullOrWhiteSpace(value)) { 
+        set
+        {
+            if (value is null) { throw new ArgumentNullException(nameof(value)); }
+            if (string.IsNullOrWhiteSpace(value!))
+            {
                 throw new ArgumentException(
-                    $"{nameof(Name)} cannot be an empty or whitespace.", nameof(value)); }
-            _Name = value; 
+                    $"{nameof(Name)} cannot be an empty or whitespace.", nameof(value));
+            }
+            _Name = value;
         }
     }
 
-    static (string, string)[] Credentials { get; } = new[] { 
+    static (string, string)[] Credentials { get; } = new[] {
         ("Inigo.Montoya", "YouKilledMyF@ther!")
-    }; 
+    };
 
     static public bool Login(string userName, string password)
     {
-        return (userName,password)==Credentials[0];
+        return (userName, password)==Credentials[0];
     }
 }

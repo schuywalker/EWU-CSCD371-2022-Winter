@@ -22,7 +22,7 @@ public class StorageServiceTests
     [TestMethod]
     public void Save_GiveMockThing_Success()
     {
-        MockThing mockSavable = new("Inigo Montoya");
+        MockThing _ = new("Inigo Montoya");
         //StorageService storageService = new(mockSavable);
     }
 
@@ -33,7 +33,7 @@ public class StorageServiceTests
         Mock<ISavable> mock = new();
         InMemoryStore store = new();
         mock.Setup<string?>(savable => savable.ToText()).Returns("mockToText");
-        StorageService storageService = new(store);
+        StorageService _ = new(store);
 
         //storageService.Save(mock.Object);
 

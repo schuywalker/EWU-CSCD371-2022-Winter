@@ -14,7 +14,11 @@
             Store.Save(item??throw new ArgumentNullException(nameof(item)));
 
 
+
         // Without Polymorphism.
+        [System.Diagnostics.CodeAnalysis.SuppressMessage(
+            "Design", "CA1062:Validate arguments of public methods", 
+            Justification = "This is a bug... we have already checked for null.")]
         public void Save(object item)
         {
             switch(item)

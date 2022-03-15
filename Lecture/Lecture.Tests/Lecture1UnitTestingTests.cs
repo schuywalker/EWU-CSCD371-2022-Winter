@@ -3,7 +3,7 @@ namespace Lecture.Tests;
 [TestClass]
 public class Lecture1UnitTestingTests
 {
-    Person Person { get; set; } = null!; // Assined in TestInitialize
+    public Person Person { get; set; } = null!; // Assined in TestInitialize
     string UserName { get; set; } = "";
     string Password { get; set; } = "";
 

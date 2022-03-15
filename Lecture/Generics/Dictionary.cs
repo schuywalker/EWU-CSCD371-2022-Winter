@@ -4,7 +4,7 @@
         where TKey : notnull 
         where TValue : class
     {
-        private List<KeyValuePair<TKey,TValue>> _List = new();
+        private readonly List<KeyValuePair<TKey,TValue>> _List = new();
         public void Add(TKey key,TValue value)
         {
             if (KeyExists(key)) { throw new ArgumentException("key already exists"); }
